@@ -1,4 +1,4 @@
-type ItemsEntry {
+type Items {
   item_id: Int
   name: String
   price: Float
@@ -6,7 +6,7 @@ type ItemsEntry {
 }
 type TrackingItems {
   customer_id: String
-  items: [ItemsEntry]
+  items: [Items]
   customer: Customer
     @materializer(
       query: "getCustomerById"
