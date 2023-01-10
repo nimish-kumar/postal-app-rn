@@ -5,7 +5,7 @@ import { GET_ORDERS } from '../graphql/queries';
 
 const useCustomerOrders = (userId: string) => {
   const { loading, error, data } = useQuery(GET_ORDERS);
-  const [order, setOrder] = useState<Order[]>([]);
+  const [orders, setOrders] = useState<Order[]>([]);
   useEffect(() => {
     if (!data) return;
     const ordersResult: Order[] = data.getOrders.map(
@@ -18,14 +18,15 @@ const useCustomerOrders = (userId: string) => {
         City: value.City,
         Lat: value.Lat,
         Lng: value.Lng,
+        trackingItems: value.trackingItems,
       })
     );
     const filteredOrders = ordersResult.filter(
       (order) => order.trackingItems.customer_id === userId
     );
-    setOrder(filteredOrders);
+    setOrders(filteredOrders);
   }, [data]);
-  return { loading, error, order };
+  return { loading, error, orders };
 };
 
 export default useCustomerOrders;
