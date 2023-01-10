@@ -51,3 +51,15 @@ export const GET_ORDERS = gql`
     }
   }
 `;
+
+export const GET_CUSTOMERS = gql`
+  query FetchCustomers {
+    getCustomers {
+      name
+      value {
+        email
+        name
+      }
+    }
+  }
+`;
