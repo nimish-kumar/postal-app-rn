@@ -7,7 +7,7 @@ import RootNavigator from './src/navigator/RootNavigator';
 import utilities from './tailwind.json';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:5001/api/ironic-kiwi',
+  uri: 'http://192.168.0.108:5001/api/ironic-kiwi',
   cache: new InMemoryCache(),
 });
 
