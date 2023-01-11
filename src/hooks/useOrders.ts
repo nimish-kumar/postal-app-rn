@@ -18,6 +18,7 @@ const useOrders = () => {
         City: value.City,
         Lat: value.Lat,
         Lng: value.Lng,
+        trackingItems: value.trackingItems,
       })
     );
     setOrders(ordersResult);

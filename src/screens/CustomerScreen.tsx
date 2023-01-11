@@ -7,7 +7,7 @@ import {
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Image, Input } from '@rneui/themed';
 import React, { useLayoutEffect, useState } from 'react';
-import { ScrollView, Text, View } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import { useTailwind } from 'tailwind-rn';
 
 import CustomerCard from '../components/CustomerCard';
@@ -30,6 +30,7 @@ const CustomerScreen = () => {
       headerShown: false,
     });
   }, []);
+
   return (
     <View style={{ backgroundColor: '#59C1CC', flex: 1 }}>
       <Image
