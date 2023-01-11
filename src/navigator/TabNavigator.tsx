@@ -5,7 +5,7 @@ import React, { useLayoutEffect } from 'react';
 import { Text } from 'react-native';
 
 import CustomerScreen from '../screens/CustomerScreen';
-import OrderScreen from '../screens/OrderScreen';
+import OrdersScreen from '../screens/OrdersScreen';
 
 export type TabNavigatorParamsList = {
   Orders: undefined;
@@ -63,7 +63,7 @@ const TabNavigator = () => {
       })}
     >
       <Tab.Screen name="Customers" component={CustomerScreen} />
-      <Tab.Screen name="Orders" component={OrderScreen} />
+      <Tab.Screen name="Orders" component={OrdersScreen} />
     </Tab.Navigator>
   );
 };
