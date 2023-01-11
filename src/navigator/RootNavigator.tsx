@@ -7,6 +7,7 @@ import TabNavigator from './TabNavigator';
 export type RootStackParamList = {
   Main: undefined;
   MyModal: { userId: string; name: string };
+  Orders: undefined;
 };
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
